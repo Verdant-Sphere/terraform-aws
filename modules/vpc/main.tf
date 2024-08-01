@@ -1,4 +1,3 @@
-
 resource "aws_vpc" "this" {
   cidr_block = var.cidr_block
 
@@ -87,15 +86,3 @@ resource "aws_route" "private_rt_route" {
   destination_cidr_block = var.public_internet_destination_cidr
   nat_gateway_id         = aws_nat_gateway.this.id
 }
-
-# # resource "aws_route_table_association" "nat_association" {
-# #   subnet_id      = aws_subnet.public_subnet.id
-# #   route_table_id = aws_route_table.this.id
-# #   gateway_id     = aws_nat_gateway.this.id
-# # }
-
-
-
-# resource "aws_inst" "name" {
-
-# }
